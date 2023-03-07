@@ -1,326 +1,327 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} UI Forms {% endblock %} 
+{% block title %} UI Forms {% endblock %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
 
-    <!-- [ Main Content ] start -->
-    <div class="pcoded-main-container">
-        <div class="pcoded-wrapper">
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
 
-            <div class="pcoded-content">
-                <div class="pcoded-inner-content">
-                    <!-- [ breadcrumb ] start -->
-                    <div class="page-header">
-                        <div class="page-block">
-                            <div class="row align-items-center">
-                                <div class="col-md-12">
-                                    <div class="page-header-title">
-                                        <h5 class="m-b-10">Form Elements</h5>
-                                    </div>
-                                    <ul class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
-                                        <li class="breadcrumb-item"><a href="javascript:">Form Componants</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript:">Form Elements</a></li>
-                                    </ul>
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-12">
+                                <div class="page-header-title">
+                                    <h5 class="m-b-10">Form Elements</h5>
                                 </div>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:">Form Componants</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:">Form Elements</a></li>
+                                </ul>
                             </div>
-                        </div>
-                    </div>
-                    <!-- [ breadcrumb ] end -->
-                    <div class="main-body">
-                        <div class="page-wrapper">
-                            <!-- [ Main Content ] start -->
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h5>Basic Componant</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <h5>Form controls</h5>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputEmail1">Email address</label>
-                                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputPassword1">Password</label>
-                                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                                        </div>
-                                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                                    </form>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label>Text</label>
-                                                            <input type="text" class="form-control" placeholder="Text">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlSelect1">Example select</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                                <option>1</option>
-                                                                <option>2</option>
-                                                                <option>3</option>
-                                                                <option>4</option>
-                                                                <option>5</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Example textarea</label>
-                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            <h5 class="mt-5">Sizing</h5>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <input class="mb-3 form-control form-control-lg" type="text" placeholder=".form-control-lg">
-                                                    <input class="mb-3 form-control" type="text" placeholder="Default input">
-                                                    <input class="mb-3 form-control form-control-sm" type="text" placeholder=".form-control-sm">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <select class="mb-3 form-control form-control-lg">
-                                                        <option>Large select</option>
-                                                    </select>
-                                                    <select class="mb-3 form-control">
-                                                        <option>Default select</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <h5 class="mt-5">Inline</h5>
-                                            <hr>
-                                            <form class="form-inline">
-                                                <div class="form-group mb-2">
-                                                    <label for="staticEmail2" class="sr-only">Email</label>
-                                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-                                                </div>
-                                                <div class="form-group mx-sm-3 mb-2">
-                                                    <label for="inputPassword2" class="sr-only">Password</label>
-                                                    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                                                </div>
-                                                <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-                                            </form>
-                                            <h3 class="mt-5">Checkboxes and Radios</h3>
-                                            <h5 class="mt-3">Checkboxes</h5>
-                                            <hr>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <h5 class="mt-5">Radios</h5>
-                                                    <hr>
-                                                    <div class="custom-control custom-radio">
-                                                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-                                                    </div>
-                                                    <div class="custom-control custom-radio">
-                                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-                                                    </div>
-                                                    <h5 class="mt-5">Inline</h5>
-                                                    <hr>
-                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                                        <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
-                                                    </div>
-                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                                        <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <h5 class="mt-5">Range</h5>
-                                                    <hr>
-                                                    <label for="customRange1">Example range</label>
-                                                    <input type="range" class="custom-range" id="customRange1">
-                                                    <label for="customRange2">Example range</label>
-                                                    <input type="range" class="custom-range" min="0" max="5" id="customRange2">
-                                                    <label for="customRange3">Example range</label>
-                                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Input group -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h5>Input Group</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">@</span>
-                                                </div>
-                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
-                                                </div>
-                                            </div>
-                                            <label for="basic-url">Your vanity URL</label>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                                                </div>
-                                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">$</span>
-                                                </div>
-                                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text">.00</span>
-                                                </div>
-                                            </div>
-                                            <h5 class="mt-5">Sizing</h5>
-                                            <hr>
-                                            <div class="input-group input-group-sm mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-                                                </div>
-                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-                                                </div>
-                                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                            </div>
-                                            <div class="input-group input-group-lg">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
-                                                </div>
-                                                <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
-                                            <h5 class="mt-5">Button Addons</h5>
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="input-group mb-3">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-primary" type="button">Button</button>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                                                    </div>
-                                                    <div class="input-group mb-3">
-                                                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-primary" type="button">Button</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="input-group mb-3">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-primary" type="button">Button</button>
-                                                            <button class="btn btn-secondary" type="button">Button</button>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                                                    </div>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-secondary" type="button">Button</button>
-                                                            <button class="btn btn-primary" type="button">Button</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <h5 class="mt-5">Buttons With Dropdowns</h5>
-                                                    <hr>
-                                                    <div class="input-group mb-3">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#!">Action</a>
-                                                                <a class="dropdown-item" href="#!">Another action</a>
-                                                                <a class="dropdown-item" href="#!">Something else here</a>
-                                                                <div role="separator" class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#!">Separated link</a>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                                    </div>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#!">Action</a>
-                                                                <a class="dropdown-item" href="#!">Another action</a>
-                                                                <a class="dropdown-item" href="#!">Something else here</a>
-                                                                <div role="separator" class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#!">Separated link</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <h5 class="mt-5">Segmented Buttons</h5>
-                                                    <hr>
-                                                    <div class="input-group mb-3">
-                                                        <div class="input-group-prepend">
-                                                            <button type="button" class="btn btn-secondary">Action</button>
-                                                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#!">Action</a>
-                                                                <a class="dropdown-item" href="#!">Another action</a>
-                                                                <a class="dropdown-item" href="#!">Something else here</a>
-                                                                <div role="separator" class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#!">Separated link</a>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-                                                    </div>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-                                                        <div class="input-group-append">
-                                                            <button type="button" class="btn btn-secondary">Action</button>
-                                                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#!">Action</a>
-                                                                <a class="dropdown-item" href="#!">Another action</a>
-                                                                <a class="dropdown-item" href="#!">Something else here</a>
-                                                                <div role="separator" class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#!">Separated link</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- [ Main Content ] end -->
                         </div>
                     </div>
                 </div>
+                <!-- [ breadcrumb ] end -->
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Basics</h5>
+                                        <h6>The Always On availability group feature is a high-availability solution
+                                            that maximizes the availability of a set of user databases for an
+                                            enterprise. An availability group supports a failover environment for a
+                                            discrete set of user databases, known as availability databases, that fail
+                                            over together. An availability group supports a set of read-write primary
+                                            databases and one to eight sets of corresponding secondary databases.</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5>Product details</h5>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Subscription<span class="mytooltip" data-tooltip="All resources in an Azure subscription are billed together." value="Help me choose subscription">?</span></label>
+                                                        
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option>SQL IaaS R&D 1</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Resource group<span class="mytooltip" data-tooltip="A resource group is a collection of resources that share the same lifecycle, permissions, and policies.." value="Help me choose resource group">?</span></label>
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <h5 class="mt-5">Instance details</h5>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="customRange2">Number of virtual machines</label>
+                                                <input type="range" class="custom-range" min="0" max="5"
+                                                    id="customRange2">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Virtual machine names<span class="mytooltip" data-tooltip="Virtual machine names." value="Help me name virtual machines">?</span></label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Region<span class="mytooltip" data-tooltip="Choose the Azure region that's right for you and your customers. Not all VM sizes are available in all regions.." value="What is region">?</span></label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>(US) East US</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Availability options<span class="mytooltip" data-tooltip="Azure offers a range of options for managing availability and resiliency for your applications. Architect your solution to use replicated VMs in Availability Zones or Availability Sets to protect your apps and data from datacenter outages and maintenance events." value="what is availability zone and availability set">?</span></label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>Availability zone</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    Security Type: Standard
+                                                </div>
+                                                <div class="form-group">
+                                                    Image: Free SQL Server License: SQL Server 2022 Developer on Windows
+                                                    Server 2022 - Gen2
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Size</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>Standard_D16as_v4 - 16 vcpus, 64 GiB memory</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5 class="mt-5">Virtual machine administrator account</h5>
+                                        <hr>
+                                        <form class="form-inline">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Username</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                                            aria-describedby="emailHelp" placeholder="Enter email">
+                                                        <small id="emailHelp" class="form-text text-muted">We'll never
+                                                            share your email with anyone else.</small>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputPassword1">Password</label>
+                                                        <input type="password" class="form-control"
+                                                            id="exampleInputPassword1" placeholder="Password">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputPassword1">Confirm password</label>
+                                                        <input type="password" class="form-control"
+                                                            id="exampleInputPassword1" placeholder="Password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <h5 class="mt-5">Licensing</h5>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Save up to 49% with a
+                                                license you already own using Azure Hybrid Benefit. Learn more
+                                                Would you like to use an existing Windows Server license?</label>
+                                        </div>
+
+
+                                        <h5 class="mt-5">SQL Server License</h5>
+                                        Save up to 43% with a license you already own with Azure Hybrid Benefit. Get a
+                                        free SQL server licenses in Azure for High Availability and Disaster Recovery
+                                        through Software Assurance. These discounts are only supported for Standard and
+                                        Enterprise editions. Learn more
+                                        <h6>SQL Server License</h6>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio1">Toggle this custom
+                                                radio</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio2">Or toggle this other
+                                                custom radio</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Input group -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Networking</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5 class="mt-5">NIC network security group</h5>
+                                                <hr>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio1" name="customRadio"
+                                                        class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio1">None</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio2" name="customRadio"
+                                                        class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio2">Basic</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5 class="mt-5">Public inbound ports</h5>
+                                                <hr>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio1" name="customRadio"
+                                                        class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio1">None</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="customRadio2" name="customRadio"
+                                                        class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadio2">Allow
+                                                        selected ports</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [ Main Content ] end -->
+                    </div>
+                </div>
+
+                <section class="msger">
+                    <header class="msger-header">
+                        <div class="msger-header-title">
+                            <i class="fas fa-bug"></i> Chatbot <i class="fas fa-bug"></i>
+                        </div>
+                    </header>
+
+                    <main class="msger-chat">
+                        <div class="msg left-msg">
+                            <div class="msg-img" style="background-image: url(/static/assets/images/user/avatar-1.jpg)"></div>
+
+                            <div class="msg-bubble">
+                                <div class="msg-text">
+                                    Hi, I am here to answer your questions. 😄
+                                </div>
+                            </div>
+                        </div>
+
+                    </main>
+
+                    <form class="msger-inputarea">
+                        <textarea type="text" class="msger-input" id="textInput"
+                            placeholder="Enter your message..."></textarea>
+                        <button type="submit" class="msger-send-btn">Send</button>
+                    </form>
+                </section>
             </div>
-            
         </div>
+
     </div>
-    <!-- [ Main Content ] end -->
+</div>
+
+<!-- partial -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+<script>
+    $(".msger").hide()
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
+
+
+    // Icons made by Freepik from www.flaticon.com
+    const BOT_IMG = "{{ config.ASSETS_ROOT }}/images/user/avatar-1.jpg";
+    const PERSON_IMG = "{{ config.ASSETS_ROOT }}/images/user/avatar-2.jpg";
+    const BOT_NAME = "    ChatBot";
+    const PERSON_NAME = "You";
+
+    $(".mytooltip").click((event) => {
+        event.preventDefault();
+        $(".msger").show()
+        const msgText = event.target.getAttribute("value");
+        if (!msgText) return;
+
+        appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+        msgerInput.value = "";
+        botResponse(msgText);
+    });
+
+    msgerForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const msgText = msgerInput.value;
+        if (!msgText) return;
+
+        appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+        msgerInput.value = "";
+        botResponse(msgText);
+    });
+
+    function appendMessage(name, img, side, text) {
+        //   Simple solution for small apps
+        const msgHTML = `
+        <div class="msg ${side}-msg">
+          <div class="msg-img" style="background-image: url(${img})"></div>
+
+          <div class="msg-bubble">
+            <div class="msg-text" style="white-space: pre-wrap">${text}</div>
+          </div>
+        </div>
+        `;
+
+        msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+        msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+
+        // Bot Response
+        $.get("/get", { msg: rawText }).done(function (data) {
+            debugger;
+            console.log(rawText);
+            console.log(data.choices[0].text);
+            const msgText = data.choices[0].text.trim(2);
+            appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+        });
+    }
+
+
+    // Utils
+    function get(selector, root = document) {
+        return root.querySelector(selector);
+    }
+
+    function formatDate(date) {
+        const h = "0" + date.getHours();
+        const m = "0" + date.getMinutes();
+
+        return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+
+</script>
+<!-- [ Main Content ] end -->
 
 {% endblock content %}
 
