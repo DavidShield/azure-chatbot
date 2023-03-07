@@ -300,9 +300,7 @@
         // Bot Response
         $.get("/get", { msg: rawText }).done(function (data) {
             debugger;
-            console.log(rawText);
-            console.log(data.choices[0].text);
-            const msgText = data.choices[0].text.trim(2);
+            const msgText = data["choices"][0]["text"].trim(2);
             appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
         });
     }

@@ -9,6 +9,7 @@ import openai
 from flask import Flask, render_template, request
 from base import Message, Prompt, Conversation
 from flask_minify  import Minify
+from index import LLMClient
 
 from apps import app
 
@@ -28,8 +29,6 @@ EXAMPLE_CONVOS = [
     ]
 ]
 
-
-
 if not DEBUG:
     Minify(app=app, html=True, js=False, cssless=False)
 
@@ -37,8 +36,7 @@ app.logger.info('DEBUG            = ' + str( DEBUG )                 )
 app.logger.info('Page Compression = ' + 'FALSE' if DEBUG else 'TRUE' )
 app.logger.info('ASSETS_ROOT      = ' + app.config['ASSETS_ROOT']    )
 
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
+llm_client = LLMClient()
 
 @app.route("/get")
 def get_bot_response():
@@ -57,15 +55,17 @@ def getResponse(message):
             convo=Conversation(messages + [Message(BOT_NAME)]),
         )
         rendered = prompt.render()
-        response = openai.Completion.create(
-            engine=MODEL_ENGINE,
-            prompt=rendered,
-            temperature=0,
-            top_p=1,
-            max_tokens=512,
-            stop=[STOP],
-        )
-        reply = response.choices[0].text.strip()
+        request_data = {
+            "prompt": rendered,
+            "max_tokens":500,
+            "temperature":0,
+            "top_p":1,
+            "stream":False,
+            "logprobs":None,
+            "stop":[STOP]
+        }
+        response = llm_client.send_request('text-chat-davinci-002', request_data)
+        reply = response["choices"][0]["text"].strip()
         if reply:
             return response
     except openai.error.InvalidRequestError as e:

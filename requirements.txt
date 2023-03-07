@@ -28,3 +28,4 @@ urllib3==1.26.7
 Werkzeug==2.0.2
 flask-socketio
 dacite==1.6.*
+msal
